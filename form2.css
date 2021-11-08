@@ -52,6 +52,10 @@ body {
       flex-wrap: wrap;
 }
 
+.margin {
+  margin-top: 6vh;
+}
+
 .icon {
   height: 45px;
   width: auto;
@@ -59,8 +63,8 @@ body {
 
 .choose-box {
   min-width: 200px;
-  width: 15vw;
-  height: 14vh;
+  width: 16vw;
+  height: 15vh;
   background-color: #ffc3a4;
   border-radius: 10px;
   display: -webkit-box;
@@ -84,5 +88,11 @@ body {
   font-size: 1.5rem;
   color: #633cff;
   margin: 0;
+  text-align: center;
+  line-height: 1;
+}
+
+.active {
+  outline: 10px solid #633cff;
 }
 /*# sourceMappingURL=form2.css.map */

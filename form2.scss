@@ -55,6 +55,10 @@ body {
   flex-wrap: wrap;
 }
 
+.margin {
+  margin-top: 6vh;
+}
+
 .icon {
   height: 45px;
   width: auto;
@@ -62,8 +66,8 @@ body {
 
 .choose-box {
   min-width: 200px;
-  width: 15vw;
-  height: 14vh;
+  width: 16vw;
+  height: 15vh;
   background-color: $pink;
   border-radius: 10px;
   display: flex;
@@ -78,4 +82,10 @@ body {
   font-size: 1.5rem;
   color: $blue;
   margin: 0;
+  text-align: center;
+  line-height: 1;
+}
+
+.active {
+  outline: 10px solid $blue;
 }
