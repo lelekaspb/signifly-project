@@ -46,10 +46,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  gap: 17vw;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-left: 9vw;
 }
 
 .margin {
@@ -63,6 +63,7 @@ body {
 
 .choose-box {
   min-width: 200px;
+  max-width: 250px;
   width: 16vw;
   height: 15vh;
   background-color: #ffc3a4;
@@ -94,5 +95,18 @@ body {
 
 .active {
   outline: 10px solid #633cff;
+}
+
+.next-button {
+  width: 120px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: #633cff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 9vw;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
 }
 /*# sourceMappingURL=form2.css.map */
