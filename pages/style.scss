@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "shapiro-bold";
+  src: url(../fonts/Shapiro-Bold.woff2) format("woff2"),
+    url(../fonts/Shapiro-Bold.woff) format("woff"),
+    url(../fonts/Shapiro-Bold.ttf) format("tff");
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "shapiro-regular";
+  src: url(../fonts/Shapiro-Regular.woff2) format("woff2"),
+    url(../fonts/Shapiro-Regular.woff) format("woff"),
+    url(../fonts/Shapiro-Regular.ttf) format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$blue: #633cff;
+$pink: #ffc3a4;
+$bg: #16152b;
+$main-font: "shapiro-regular";
+$main-bold-font: "shapiro-bold";
+
+* {
+  font-family: $main-font;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #16152b;
+}
+
+.firstpage-ss {
+  width: 100vw;
+  height: auto;
+  position: relative;
+}
+
+.signup-button {
+  width: 120px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: $blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.login-text {
+  font-size: 12px;
+  color: #514e7f;
+  cursor: pointer;
+}
+
+.frontpage-wrap {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
