@@ -22,12 +22,31 @@ $main-bold-font: "shapiro-bold";
 
 body {
   background-color: $bg;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100vw;
+}
+
+.progressbar-flex {
+  display: flex;
+  justify-content: center;
+  margin-top: -5vh;
+}
+
+.step {
+  width: 30vw;
+  height: auto;
 }
 
 .title {
   font-family: $main-bold-font;
   color: white;
   font-size: 1rem;
+  margin-left: 9vw;
+  margin-top: 10vh;
+  margin-bottom: 3vh;
 }
 
 .chooser-wrap {
@@ -37,8 +56,8 @@ body {
 }
 
 .icon {
-  width: 45px;
-  height: auto;
+  height: 45px;
+  width: auto;
 }
 
 .choose-box {

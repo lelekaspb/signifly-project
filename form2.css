@@ -11,12 +11,35 @@
 
 body {
   background-color: #16152b;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100vw;
+}
+
+.progressbar-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -5vh;
+}
+
+.step {
+  width: 30vw;
+  height: auto;
 }
 
 .title {
   font-family: "shapiro-bold";
   color: white;
   font-size: 1rem;
+  margin-left: 9vw;
+  margin-top: 10vh;
+  margin-bottom: 3vh;
 }
 
 .chooser-wrap {
@@ -30,8 +53,8 @@ body {
 }
 
 .icon {
-  width: 45px;
-  height: auto;
+  height: 45px;
+  width: auto;
 }
 
 .choose-box {
