@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "uniformprocon-blk";
+  src: url(../fonts/UniformProCon-Blk.woff2) format("woff2"),
+    url(../fonts/UniformProCon-Blk.woff) format("woff"),
+    url(../fonts/UniformProCon-Blk.ttf) format("tff");
+  font-weight: bold;
+  font-style: normal;
+
+  font-family: "shapiro-regular";
+  src: url(../fonts/Shapiro-Regular.woff2) format("woff2"),
+    url(../fonts/Shapiro-Regular.woff) format("woff"),
+    url(../fonts/Shapiro-Regular.ttf) format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "uniformprocon-blk";
+}
+
+body {
+  background-color: #16152b;
+}
+
+.progressbar-flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.step {
+  width: 30vw;
+  height: auto;
+}
