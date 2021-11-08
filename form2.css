@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "shapiro-bold";
+  src: url(../fonts/Shapiro-Bold.woff2) format("woff2"), url(../fonts/Shapiro-Bold.woff) format("woff"), url(../fonts/Shapiro-Bold.ttf) format("tff");
+  font-weight: normal;
+  font-style: normal;
+  font-family: "shapiro-regular";
+  src: url(../fonts/Shapiro-Regular.woff2) format("woff2"), url(../fonts/Shapiro-Regular.woff) format("woff"), url(../fonts/Shapiro-Regular.ttf) format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #16152b;
+}
+
+.title {
+  font-family: "shapiro-bold";
+  color: white;
+  font-size: 1rem;
+}
+
+.chooser-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.icon {
+  width: 45px;
+  height: auto;
+}
+
+.choose-box {
+  min-width: 200px;
+  width: 15vw;
+  height: 14vh;
+  background-color: #ffc3a4;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+.game-type {
+  font-family: "shapiro-bold";
+  font-size: 1.5rem;
+  color: #633cff;
+  margin: 0;
+}
+/*# sourceMappingURL=form2.css.map */
