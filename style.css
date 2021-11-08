@@ -1,9 +1,111 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: red;
-  margin-top: 60px;
+@font-face {
+  font-family: "shapiro-bold";
+  src: url(../fonts/Shapiro-Bold.woff2) format("woff2"), url(../fonts/Shapiro-Bold.woff) format("woff"), url(../fonts/Shapiro-Bold.ttf) format("tff");
+  font-weight: normal;
+  font-style: normal;
+  font-family: "shapiro-regular";
+  src: url(../fonts/Shapiro-Regular.woff2) format("woff2"), url(../fonts/Shapiro-Regular.woff) format("woff"), url(../fonts/Shapiro-Regular.ttf) format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "shapiro-regular";
+}
+
+body {
+  margin: 0 auto;
+  background-color: #16152b;
+}
+
+.firstpage-ss {
+  width: 100vw;
+  height: auto;
+  position: relative;
+}
+
+.signup-button {
+  width: 120px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: #633cff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.login-text {
+  font-size: 12px;
+  color: #514e7f;
+  cursor: pointer;
+}
+
+.frontpage-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* justify-content: center; */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.title {
+  font-family: "shapiro-bold";
+  color: white;
+  font-size: 1rem;
+}
+
+.chooser-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.icon {
+  width: 45px;
+  height: auto;
+}
+
+.choose-box {
+  min-width: 200px;
+  width: 15vw;
+  height: 14vh;
+  background-color: #ffc3a4;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+.game-type {
+  font-family: "shapiro-bold";
+  font-size: 1.5rem;
+  color: #633cff;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
