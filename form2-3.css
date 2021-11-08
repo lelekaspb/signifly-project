@@ -110,4 +110,10 @@ body {
   margin-top: 5vh;
   margin-bottom: 10vh;
 }
-/*# sourceMappingURL=form2.css.map */
+
+.game-logo {
+  width: 160px;
+  height: auto;
+  max-height: 120px;
+}
+/*# sourceMappingURL=form2-3.css.map */
