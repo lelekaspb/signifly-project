@@ -19,86 +19,107 @@ export const reference = {
     {
       name: "CS:GO",
       type: ["FPS"],
+      imageSrc: "./images/logos/csgo_blue.svg",
     },
     {
       name: "Tekken",
       type: ["Fighting"],
+      imageSrc: "./images/logos/tekken_blue.svg",
     },
     {
       name: "FIFA",
       type: ["Sports", "Simulation"],
+      imageSrc: "./images/logos/fifa_blue.svg",
     },
     {
       name: "Super Mario",
       type: ["Platform"],
+      imageSrc: "./images/logos/super_mario_blue.svg",
     },
     {
       name: "Fortnite",
       type: ["Survival", "Battle royale"],
+      imageSrc: "./images/logos/fortnite_blue.svg",
     },
     {
       name: "Call of Duty",
       type: ["FPS"],
+      imageSrc: "./images/logos/call_of_duty_blue.svg",
     },
     {
       name: "The Sims",
       type: ["Simulation"],
+      imageSrc: "./images/logos/the_sims_blue.svg",
     },
     {
       name: "Mortal Combat",
       type: ["Fighting"],
+      imageSrc: "./images/logos/mortal_combat_blue.svg",
     },
     {
       name: "Guitar Hero",
       type: ["Rhythm"],
+      imageSrc: "./images/logos/guitar_hero.svg",
     },
     {
       name: "World of Warcraft",
       type: ["MMORPG"],
+      imageSrc: "./images/logos/world_warcraft_blue.svg",
     },
     {
       name: "Skyrim",
       type: ["Role-playing"],
+      imageSrc: "./images/logos/skyrim_blue.svg",
     },
     {
       name: "Starcraft",
       type: ["RTS"],
+      imageSrc: "./images/logos/starcraft_blue.svg",
     },
     {
       name: "Warcraft",
       type: ["MMORPG", "Tower defense", "RTS"],
+      imageSrc: "./images/logos/warcraft_blue.svg",
     },
     {
       name: "League of Legends",
       type: ["MMORPG", "Role-playing"],
+      imageSrc: "./images/logos/league_of_legends_blue.svg",
     },
     {
       name: "Dota",
       type: ["RTS"],
+      imageSrc: "./images/logos/dota_blue.svg",
     },
     {
       name: "Valorant",
       type: ["FPS"],
+      imageSrc: "./images/logos/valorant_blue.svg",
     },
     {
       name: "Left for dead",
       type: ["FPS", "Survival"],
+      imageSrc: "./images/logos/left4dead_blue.svg",
     },
     {
       name: "Overwatch",
       type: ["FPS"],
+      imageSrc: "./images/logos/overwatch_blue.svg",
     },
     {
       name: "PUBG",
       type: ["Battle royale"],
+      imageSrc: "./images/logos/pubg_blue.svg",
     },
     {
       name: "Diablo",
       type: ["Role-playing"],
+      imageSrc: "./images/logos/diablo_blue.svg",
     },
     {
       name: "Minecraft",
       type: ["Survival"],
+      imageSrc: "./images/logos/minecraft.svg",
     },
   ],
   areas: {
@@ -114,40 +135,3 @@ export const reference = {
     setup: ["Technology", "Physiology"],
   },
 };
-
-const userProfile = {
-  game_types: [],
-  games: [],
-  areas: [],
-  email: "",
-  password: "",
-};
-
-function calculateGames(typesArray) {
-  const gamesArray = [];
-  typesArray.forEach((type) => {
-    console.log(type);
-    const result = reference.games.filter((game) => game.type.includes(type));
-    console.log(result);
-    result.forEach((element) => {
-      gamesArray.push(element);
-    });
-  });
-  console.log(gamesArray);
-  return gamesArray;
-}
-
-// calculateGames(userProfile.game_types);
-
-export function updateUserProfileAreas(areasChosen) {
-  areasChosen.forEach((areaChosen) => {
-    reference.areas[areaChosen].forEach((item) => {
-      userProfile.areas.push(item);
-    });
-  });
-  console.log(userProfile);
-}
-
-export function getUserProfile() {
-  return userProfile;
-}

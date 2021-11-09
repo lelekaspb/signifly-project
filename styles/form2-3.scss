@@ -57,13 +57,15 @@ body {
 
 .chooser-wrap {
   display: flex;
-  gap: 17vw;
+  justify-content: flex-start;
+  gap: 6vw;
   flex-wrap: wrap;
   margin-left: 9vw;
+  margin-right: 9vw;
 }
 
 .margin {
-  margin-top: 6vh;
+  margin-top: 2vh;
 }
 
 .icon {
@@ -95,11 +97,12 @@ body {
   line-height: 1;
 }
 
-.active {
+.selected {
   outline: 10px solid $blue;
 }
 
 .next-button {
+  display: block;
   width: 120px;
   height: 40px;
   border-radius: 100px;
