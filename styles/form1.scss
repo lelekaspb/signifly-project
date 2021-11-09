@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "shapiro-bold";
+  src: url(../fonts/Shapiro-Bold.woff2) format("woff2"),
+    url(../fonts/Shapiro-Bold.woff) format("woff"),
+    url(../fonts/Shapiro-Bold.ttf) format("tff");
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "shapiro-regular";
+  src: url(../fonts/Shapiro-Regular.woff2) format("woff2"),
+    url(../fonts/Shapiro-Regular.woff) format("woff"),
+    url(../fonts/Shapiro-Regular.ttf) format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$blue: #633cff;
+$pink: #ffc3a4;
+$bg: #16152b;
+$main-font: "shapiro-regular";
+$main-bold-font: "shapiro-bold";
+
+* {
+  font-family: $main-font;
+  font-size: 16px;
+}
+
+body {
+  background-color: $bg;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content 1fr;
+}
+
+section.top {
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+
+  img {
+    width: 100vw;
+  }
+}
+
+section.progressbar {
+  grid-column: 1 / -1;
+  grid-row: 2 / span 1;
+
+  .progressbar-flex {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .step {
+    width: 30vw;
+    height: auto;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .step {
+      width: 50vw;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .step {
+      width: 60vw;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .step {
+      width: 80vw;
+    }
+  }
+}
+
+main {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+  padding: 2rem 3rem;
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 1rem 0;
+
+    legend {
+      margin: 0.5rem 0;
+    }
+  }
+
+  form {
+    input[type="radio"] {
+      accent-color: $blue;
+    }
+
+    button[type="submit"] {
+      width: 120px;
+      height: 40px;
+      border-radius: 100px;
+      background-color: #633cff;
+      color: white;
+      letter-spacing: 1px;
+      border: none;
+      cursor: pointer;
+      margin-top: 1rem;
+      margin-bottom: 3vh;
+    }
+  }
+}
+
+aside {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  padding: 4rem 3rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  img {
+    max-width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  aside {
+    display: none;
+  }
+
+  main {
+    grid-column: 1 / span 2;
+    padding: 2rem 6rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    padding: 1rem;
+  }
+}
