@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "shapiro-bold";
+  src: url(../fonts/Shapiro-Bold.woff2) format("woff2"),
+    url(../fonts/Shapiro-Bold.woff) format("woff"),
+    url(../fonts/Shapiro-Bold.ttf) format("tff");
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "shapiro-regular";
+  src: url(../fonts/Shapiro-Regular.woff2) format("woff2"),
+    url(../fonts/Shapiro-Regular.woff) format("woff"),
+    url(../fonts/Shapiro-Regular.ttf) format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$blue: #633cff;
+$pink: #ffc3a4;
+$bg: #16152b;
+$main-font: "shapiro-regular";
+$main-bold-font: "shapiro-bold";
+
+body {
+  background-color: $bg;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100vw;
+}
+
+.progressbar-flex {
+  display: flex;
+  justify-content: center;
+  margin-top: -5vh;
+}
+
+.step {
+  width: 30vw;
+  height: auto;
+}
+
+.title {
+  font-family: $main-bold-font;
+  color: white;
+  font-size: 1rem;
+  margin-left: 9vw;
+  margin-top: 8vh;
+  margin-bottom: 3vh;
+  max-width: 400px;
+}
+
+input {
+  background-color: #dfdfe1;
+  border: none;
+  border-radius: 5px;
+  width: 30vw;
+  height: 3.5vh;
+  min-width: 400px;
+  min-height: 30px;
+  margin-left: 9vw;
+}
+
+label {
+  margin-left: 9vw;
+  color: white;
+  font-family: $main-font;
+}
+
+.label-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label-parent {
+  gap: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.form4-pic {
+  width: 40vw;
+  height: auto;
+  margin-top: 7vh;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  gap: 8vw;
+}
+
+button {
+  width: 120px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: $blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 9vw;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
