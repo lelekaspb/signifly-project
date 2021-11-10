@@ -20,6 +20,10 @@ $bg: #16152b;
 $main-font: "shapiro-regular";
 $main-bold-font: "shapiro-bold";
 
+* {
+  font-family: $main-font;
+}
+
 body {
   background-color: $bg;
   margin: 0 auto;
