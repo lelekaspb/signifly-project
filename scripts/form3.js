@@ -13,6 +13,7 @@ function displayGame(game) {
 
   const imgElement = document.createElement("img");
   imgElement.src = game.imageSrc;
+  imgElement.alt = game.name;
   imgElement.className = "game-logo";
 
   divElement.append(imgElement);
@@ -20,20 +21,38 @@ function displayGame(game) {
   document.querySelector(".chooser-wrap").append(divElement);
 }
 
-document.querySelector(".chooser-wrap").addEventListener("click", selectGame);
+document.querySelectorAll(".choose-box").forEach((item) => {
+  item.addEventListener("click", selectGame);
+});
 
 function selectGame(event) {
   const selectedType = event.target.closest(".choose-box");
   selectedType.classList.add("selected");
   userProfile.gamesSelected.push(selectedType.dataset.game);
+  console.log(selectedType);
+  console.log(userProfile);
+  selectedType.removeEventListener("click", selectGame);
+  selectedType.addEventListener("click", deselectGame);
+}
+
+function deselectGame(event) {
+  const selectedType = event.target.closest(".choose-box");
+  selectedType.classList.remove("selected");
+  const index = userProfile.gamesSelected.findIndex(
+    (element) => element === selectedType.dataset.game
+  );
+  userProfile.gamesSelected.splice(index, 1);
+  console.log(userProfile);
+  selectedType.removeEventListener("click", deselectGame);
+  selectedType.addEventListener("click", selectGame);
 }
 
 document
   .querySelector(".next-button")
-  .addEventListener("click", storeChosenTypes);
+  .addEventListener("click", storeChosenGames);
 
-function storeChosenTypes() {
-  if (userProfile.game_types.length) {
+function storeChosenGames() {
+  if (userProfile.gamesSelected.length) {
     localStorage.setItem("profile", JSON.stringify(userProfile));
     window.location.href = "form4.html";
   } else {

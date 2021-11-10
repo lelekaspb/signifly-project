@@ -1,17 +1,31 @@
 import "../styles/form2-3.scss";
 import { reference } from "./data";
 
-const userProfile = JSON.parse(localStorage.getItem("profile"));
-console.log(userProfile);
+console.log(reference);
 
-document
-  .querySelector(".chooser-wrap")
-  .addEventListener("click", selectGameType);
+const userProfile = JSON.parse(localStorage.getItem("profile"));
+
+document.querySelectorAll(".choose-box").forEach((item) => {
+  item.addEventListener("click", selectGameType);
+});
 
 function selectGameType(event) {
   const selectedType = event.target.closest(".choose-box");
   selectedType.classList.add("selected");
   userProfile.game_types.push(selectedType.dataset.type);
+  selectedType.removeEventListener("click", selectGameType);
+  selectedType.addEventListener("click", deselectGameType);
+}
+
+function deselectGameType(event) {
+  const selectedType = event.target.closest(".choose-box");
+  selectedType.classList.remove("selected");
+  const index = userProfile.game_types.findIndex(
+    (element) => element === selectedType.dataset.type
+  );
+  userProfile.game_types.splice(index, 1);
+  selectedType.removeEventListener("click", deselectGameType);
+  selectedType.addEventListener("click", selectGameType);
 }
 
 document
@@ -24,16 +38,16 @@ function storeChosenTypes() {
     localStorage.setItem("profile", JSON.stringify(userProfile));
     window.location.href = "form3.html";
   } else {
-    alert("Please, choose type of games you are interested in");
+    alert("Please, choose type(s) of games you are interested in");
   }
 }
 
 function calculateGames() {
   userProfile.game_types.forEach((type) => {
     const result = reference.games.filter((game) => game.type.includes(type));
-    console.log(result);
     result.forEach((element) => {
       userProfile.gamesShown.push(element);
     });
   });
+  userProfile.gamesShown = [...new Set(userProfile.gamesShown)];
 }
