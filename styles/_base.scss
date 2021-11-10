@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "shapiro-bold";
+  src: url(../fonts/Shapiro-Bold.woff2) format("woff2"),
+    url(../fonts/Shapiro-Bold.woff) format("woff"),
+    url(../fonts/Shapiro-Bold.ttf) format("tff");
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "shapiro-regular";
+  src: url(../fonts/Shapiro-Regular.woff2) format("woff2"),
+    url(../fonts/Shapiro-Regular.woff) format("woff"),
+    url(../fonts/Shapiro-Regular.ttf) format("tff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  $blue: #633cff;
+  $pink: #ffc3a4;
+  $bg: #16152b;
+  $main-font: "shapiro-regular";
+  $main-bold-font: "shapiro-bold";
+}
