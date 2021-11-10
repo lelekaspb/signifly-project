@@ -1,12 +1,14 @@
 import "../styles/form2-3.scss";
 
 const userProfile = JSON.parse(localStorage.getItem("profile"));
-
 console.log(userProfile);
 
 userProfile.gamesShown.forEach(displayGame);
 
 function displayGame(game) {
+  console.log(game.name);
+  console.log(userProfile.gamesSelected.includes(game.name));
+  console.log(userProfile.gamesSelected);
   const divElement = document.createElement("div");
   divElement.className = "choose-box";
   divElement.dataset.game = game.name;
@@ -18,12 +20,15 @@ function displayGame(game) {
 
   divElement.append(imgElement);
 
+  if (userProfile.gamesSelected.includes(game.name)) {
+    divElement.classList.add("selected");
+    divElement.addEventListener("click", deselectGame);
+  } else {
+    divElement.addEventListener("click", selectGame);
+  }
+
   document.querySelector(".chooser-wrap").append(divElement);
 }
-
-document.querySelectorAll(".choose-box").forEach((item) => {
-  item.addEventListener("click", selectGame);
-});
 
 function selectGame(event) {
   const selectedType = event.target.closest(".choose-box");

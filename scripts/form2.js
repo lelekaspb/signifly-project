@@ -4,11 +4,16 @@ import { reference } from "./data";
 console.log(reference);
 
 const userProfile = JSON.parse(localStorage.getItem("profile"));
+console.log(userProfile);
 
 document.querySelectorAll(".choose-box").forEach((item) => {
-  if (userProfile.game_types.includes(item.dataset.type)) {
-    item.classList.add("selected");
-    item.addEventListener("click", deselectGameType);
+  if (userProfile.game_types.length > 0) {
+    if (userProfile.game_types.includes(item.dataset.type)) {
+      item.classList.add("selected");
+      item.addEventListener("click", deselectGameType);
+    } else {
+      item.addEventListener("click", selectGameType);
+    }
   } else {
     item.addEventListener("click", selectGameType);
   }
@@ -40,6 +45,7 @@ document
 function storeChosenTypes() {
   if (userProfile.game_types.length) {
     calculateGames();
+
     localStorage.setItem("profile", JSON.stringify(userProfile));
     window.location.href = "form3.html";
   } else {
@@ -56,4 +62,12 @@ function calculateGames() {
     });
   });
   userProfile.gamesShown = [...new Set(userProfile.gamesShown)];
+  const temp = userProfile.gamesShown.filter((elem) =>
+    userProfile.gamesSelected.includes(elem.name)
+  );
+  temp.forEach((item) => {
+    userProfile.gamesSelected.push(item.name);
+  });
+  userProfile.gamesSelected = [...new Set(userProfile.gamesSelected)];
+  console.log(userProfile);
 }
