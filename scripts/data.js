@@ -59,7 +59,7 @@ export const reference = {
     {
       name: "Guitar Hero",
       type: ["Rhythm"],
-      imageSrc: "./images/logos/guitar_hero.svg",
+      imageSrc: "./images/logos/guitar_hero_blue.svg",
     },
     {
       name: "World of Warcraft",
