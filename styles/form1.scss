@@ -80,6 +80,7 @@ main {
   grid-column: 1 / span 1;
   grid-row: 3 / span 1;
   padding: 2rem 3rem;
+  margin-left: 3vw;
 
   fieldset {
     border: none;
@@ -94,6 +95,7 @@ main {
   form {
     input[type="radio"] {
       accent-color: $blue;
+      cursor: pointer;
     }
 
     button[type="submit"] {
@@ -132,6 +134,7 @@ aside {
   main {
     grid-column: 1 / span 2;
     padding: 2rem 6rem;
+    margin-left: 0;
   }
 }
 

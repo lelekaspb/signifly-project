@@ -45,7 +45,7 @@ body {
 }
 
 .title {
-  font-family: $main-bold-font;
+  // font-family: $main-bold-font;
   color: white;
   font-size: 1rem;
   margin-left: 9vw;
@@ -66,11 +66,19 @@ input {
 }
 
 input:valid {
-  outline: 2px solid #4dbe57;
+  border: 2px solid #4dbe57;
 }
 
 input:invalid {
-  outline: 2px solid #dc8174;
+  border: 2px solid #dc8174;
+}
+
+input:placeholder-shown {
+  border: 2px solid #999999;
+}
+
+input:focus {
+  border: 2px solid #808080;
 }
 
 label {
