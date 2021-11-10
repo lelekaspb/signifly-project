@@ -24,7 +24,7 @@
 //   font-family: $main-font;
 // }
 
-@use "base";
+@use "./styles/base";
 
 * {
   font-family: base.$main-font;
