@@ -80,6 +80,7 @@ body {
 .choose-box {
   min-width: 200px;
   max-width: 250px;
+  min-height: 120px;
   width: 16vw;
   height: 15vh;
   background-color: $pink;
@@ -122,5 +123,5 @@ body {
 .game-logo {
   width: 160px;
   height: auto;
-  max-height: 120px;
+  max-height: 100px;
 }
