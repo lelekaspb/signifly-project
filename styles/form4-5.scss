@@ -61,6 +61,14 @@ input {
   margin-left: 9vw;
 }
 
+input:valid {
+  outline: 2px solid #4dbe57;
+}
+
+input:invalid {
+  outline: 2px solid #dc8174;
+}
+
 label {
   margin-left: 9vw;
   color: white;
@@ -100,8 +108,7 @@ button {
   border: none;
   cursor: pointer;
   margin-left: 9vw;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 8vh;
 }
 
 .big-thankyou {
