@@ -6,7 +6,12 @@ console.log(reference);
 const userProfile = JSON.parse(localStorage.getItem("profile"));
 
 document.querySelectorAll(".choose-box").forEach((item) => {
-  item.addEventListener("click", selectGameType);
+  if (userProfile.game_types.includes(item.dataset.type)) {
+    item.classList.add("selected");
+    item.addEventListener("click", deselectGameType);
+  } else {
+    item.addEventListener("click", selectGameType);
+  }
 });
 
 function selectGameType(event) {
@@ -43,6 +48,7 @@ function storeChosenTypes() {
 }
 
 function calculateGames() {
+  userProfile.gamesShown = [];
   userProfile.game_types.forEach((type) => {
     const result = reference.games.filter((game) => game.type.includes(type));
     result.forEach((element) => {
