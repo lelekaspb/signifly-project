@@ -99,6 +99,25 @@ label {
   flex-direction: column;
 }
 
+.star {
+  color: #b51212;
+}
+
+.hint {
+  width: 30vw;
+  margin-left: 9vw;
+  font-size: 14px;
+  color: #dc8174;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+input:invalid + .hint:not(input:placeholder-shown + .hint) {
+  visibility: visible;
+  opacity: 1;
+}
+
 .form4-pic {
   width: 40vw;
   height: auto;

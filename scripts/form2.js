@@ -1,10 +1,7 @@
 import "../styles/form2-3.scss";
 import { reference } from "./data";
 
-console.log(reference);
-
 const userProfile = JSON.parse(localStorage.getItem("profile"));
-console.log(userProfile);
 
 document.querySelectorAll(".choose-box").forEach((item) => {
   if (userProfile.game_types.length > 0) {
@@ -45,7 +42,6 @@ document
 function storeChosenTypes() {
   if (userProfile.game_types.length) {
     calculateGames();
-
     localStorage.setItem("profile", JSON.stringify(userProfile));
     window.location.href = "form3.html";
   } else {
@@ -69,5 +65,4 @@ function calculateGames() {
     userProfile.gamesSelected.push(item.name);
   });
   userProfile.gamesSelected = [...new Set(userProfile.gamesSelected)];
-  console.log(userProfile);
 }

@@ -1,14 +1,10 @@
 import "../styles/form2-3.scss";
 
 const userProfile = JSON.parse(localStorage.getItem("profile"));
-console.log(userProfile);
 
 userProfile.gamesShown.forEach(displayGame);
 
 function displayGame(game) {
-  console.log(game.name);
-  console.log(userProfile.gamesSelected.includes(game.name));
-  console.log(userProfile.gamesSelected);
   const divElement = document.createElement("div");
   divElement.className = "choose-box";
   divElement.dataset.game = game.name;
@@ -34,8 +30,6 @@ function selectGame(event) {
   const selectedType = event.target.closest(".choose-box");
   selectedType.classList.add("selected");
   userProfile.gamesSelected.push(selectedType.dataset.game);
-  console.log(selectedType);
-  console.log(userProfile);
   selectedType.removeEventListener("click", selectGame);
   selectedType.addEventListener("click", deselectGame);
 }
@@ -47,7 +41,6 @@ function deselectGame(event) {
     (element) => element === selectedType.dataset.game
   );
   userProfile.gamesSelected.splice(index, 1);
-  console.log(userProfile);
   selectedType.removeEventListener("click", deselectGame);
   selectedType.addEventListener("click", selectGame);
 }

@@ -103,13 +103,11 @@ function submitForm(e) {
 }
 
 function updateUserProfileAreas(areasChosen) {
-  console.log(areasChosen);
   areasChosen.forEach((areaChosen) => {
     reference.areas[areaChosen].forEach((item) => {
       userProfile.areas.push(item);
     });
   });
-  console.log(userProfile);
   saveInLocalStorage();
 }
 

@@ -24,6 +24,7 @@ async function submitForm(e) {
   e.preventDefault();
   payload.email = form.elements.email.value;
   payload.password = form.elements.password.value;
+  console.log(form.elements.password.value);
   await postData();
   localStorage.removeItem("profile");
   clearForm();
@@ -52,4 +53,24 @@ async function clearForm() {
 
 async function changePage() {
   window.location.href = "form5.html";
+}
+
+// password validation
+const re = new RegExp(/^.*(?=.{6,15})(?=.*\d)(?=.*[a-zA-Z]).*$/);
+const passwordField = document.querySelector("input.password");
+
+passwordField.addEventListener("keyup", checkPassword);
+let keyStroke = "";
+function checkPassword(e) {
+  const key = e.key;
+  console.log(key);
+  keyStroke += key;
+  console.log(keyStroke);
+  console.log(re.test(keyStroke));
+  if (!re.test(keyStroke)) {
+    passwordField.setCustomValidity("Invalid field.");
+    console.log("here");
+  } else {
+    passwordField.setCustomValidity("");
+  }
 }

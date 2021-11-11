@@ -23,7 +23,9 @@
           <form>
             <div class="label-parent">
               <div class="label-wrap">
-                <label for="fname">Email address</label>
+                <label for="fname"
+                  >Email address <span class="star">*</span></label
+                >
                 <input
                   type="email"
                   class="email"
@@ -32,9 +34,11 @@
                   placeholder=" "
                   inputmode="email"
                 />
+
+                <span class="hint">You must enter a valid email address</span>
               </div>
               <div class="label-wrap">
-                <label for="lname">Password</label>
+                <label for="lname">Password <span class="star">*</span></label>
                 <input
                   type="password"
                   class="password"
@@ -42,6 +46,10 @@
                   required
                   placeholder=" "
                 />
+                <span class="hint"
+                  >Your password must contain 6 - 15 characters, including at
+                  least one letter and number</span
+                >
               </div>
             </div>
             <a href="#">
