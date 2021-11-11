@@ -26,6 +26,7 @@ $main-bold-font: "shapiro-bold";
 }
 
 body {
+  margin: 0 auto;
   background-color: $bg;
   color: #ffffff;
   display: grid;
@@ -50,6 +51,7 @@ section.progressbar {
     display: flex;
     justify-content: center;
     margin: 1rem 0;
+    margin-top: -5vh;
   }
 
   .step {
