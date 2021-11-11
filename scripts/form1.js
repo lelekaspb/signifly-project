@@ -13,88 +13,53 @@ const userProfile = {
 document.querySelector("form").addEventListener("submit", submitForm);
 
 function submitForm(e) {
+  e.preventDefault();
   const areasChosen = ["common"];
   checkAnswers();
 
   function checkAnswers() {
     // sleep area
-    if (
-      e.target.querySelector(
-        `fieldset[data-area="sleep"] input[data-value="no"]`
-      )
-    ) {
+    if (e.target.querySelector(`#sleep-no`).checked) {
       areasChosen.push("sleep");
     }
 
     // body area
-    if (
-      e.target.querySelector(
-        `fieldset[data-area="body"] input[data-value="yes"]`
-      )
-    ) {
+    if (e.target.querySelector(`#body-yes`).checked) {
       areasChosen.push("body");
     }
 
     // mind area
-    if (
-      e.target.querySelector(
-        `fieldset[data-area="mind"] input[data-value="yes"]`
-      )
-    ) {
+    if (e.target.querySelector(`#mind-yes`).checked) {
       areasChosen.push("mind");
     }
 
     // hearing area
-    if (
-      e.target.querySelector(
-        `fieldset[data-area="hearing"] input[data-value="yes"]`
-      )
-    ) {
+    if (e.target.querySelector(`#hearing-yes`).checked) {
       areasChosen.push("hearing");
     }
 
     // strategy area
-    if (
-      e.target.querySelector(
-        `fieldset[data-area="strategy"] input[data-value="yes"]`
-      )
-    ) {
+    if (e.target.querySelector(`#strategy-yes`).checked) {
       areasChosen.push("strategy");
     }
 
     // communication area
-    if (
-      e.target.querySelector(
-        `fieldset[data-area="communication"] input[data-value="yes"]`
-      )
-    ) {
+    if (e.target.querySelector(`#communication-yes`).checked) {
       areasChosen.push("communication");
     }
 
     // setup area
-    if (
-      e.target.querySelector(
-        `fieldset[data-area="setup"] input[data-value="yes"]`
-      )
-    ) {
+    if (e.target.querySelector(`#setup-yes`).checked) {
       areasChosen.push("setup");
     }
 
     // nutrition area
-    if (
-      e.target.querySelector(
-        `fieldset[data-area="nutrition"] input[data-value="no"]`
-      )
-    ) {
+    if (e.target.querySelector(`#nutrition-no`).checked) {
       areasChosen.push("nutrition");
     }
 
     // multitasking area
-    if (
-      e.target.querySelector(
-        `fieldset[data-area="multitasking"] input[data-value="yes"]`
-      )
-    ) {
+    if (e.target.querySelector(`#multitasking-yes`).checked) {
       areasChosen.push("multitasking");
     }
   }
@@ -108,6 +73,7 @@ function updateUserProfileAreas(areasChosen) {
       userProfile.areas.push(item);
     });
   });
+  console.log(userProfile.areas);
   saveInLocalStorage();
 }
 

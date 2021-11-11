@@ -24,11 +24,10 @@ async function submitForm(e) {
   e.preventDefault();
   payload.email = form.elements.email.value;
   payload.password = form.elements.password.value;
-  console.log(form.elements.password.value);
   await postData();
-  localStorage.removeItem("profile");
   clearForm();
   changePage();
+  localStorage.removeItem("profile");
 }
 
 const postData = async function () {
@@ -40,13 +39,15 @@ const postData = async function () {
       headers,
       body: postData,
     };
-    await fetch(endpoint, options);
+    const data = await fetch(endpoint, options);
+    console.log(data);
   } catch (err) {
     console.log("Caught error " + err);
   }
 };
 
 async function clearForm() {
+  console.log("clear form");
   form.elements.email.value = "";
   form.elements.password.value = "";
 }
