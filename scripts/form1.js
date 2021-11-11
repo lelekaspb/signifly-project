@@ -13,7 +13,7 @@ const userProfile = {
 document.querySelector("form").addEventListener("submit", submitForm);
 
 function submitForm(e) {
-  e.preventDefault();
+  // e.preventDefault();
   const areasChosen = ["common"];
   checkAnswers();
 
