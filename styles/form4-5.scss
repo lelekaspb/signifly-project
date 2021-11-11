@@ -1,31 +1,33 @@
-@font-face {
-  font-family: "shapiro-bold";
-  src: url(../fonts/Shapiro-Bold.woff2) format("woff2"),
-    url(../fonts/Shapiro-Bold.woff) format("woff"),
-    url(../fonts/Shapiro-Bold.ttf) format("tff");
-  font-weight: normal;
-  font-style: normal;
+// @font-face {
+//   font-family: "shapiro-bold";
+//   src: url(../fonts/Shapiro-Bold.woff2) format("woff2"),
+//     url(../fonts/Shapiro-Bold.woff) format("woff"),
+//     url(../fonts/Shapiro-Bold.ttf) format("tff");
+//   font-weight: normal;
+//   font-style: normal;
 
-  font-family: "shapiro-regular";
-  src: url(../fonts/Shapiro-Regular.woff2) format("woff2"),
-    url(../fonts/Shapiro-Regular.woff) format("woff"),
-    url(../fonts/Shapiro-Regular.ttf) format("tff");
-  font-weight: normal;
-  font-style: normal;
-}
+//   font-family: "shapiro-regular";
+//   src: url(../fonts/Shapiro-Regular.woff2) format("woff2"),
+//     url(../fonts/Shapiro-Regular.woff) format("woff"),
+//     url(../fonts/Shapiro-Regular.ttf) format("tff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
-$blue: #633cff;
-$pink: #ffc3a4;
-$bg: #16152b;
-$main-font: "shapiro-regular";
-$main-bold-font: "shapiro-bold";
+// $blue: #633cff;
+// $pink: #ffc3a4;
+// $bg: #16152b;
+// $main-font: "shapiro-regular";
+// $main-bold-font: "shapiro-bold";
+
+@use "./styles/base";
 
 * {
-  font-family: $main-font;
+  font-family: base.$main-font;
 }
 
 body {
-  background-color: $bg;
+  background-color: base.$bg;
   margin: 0 auto;
 }
 
@@ -84,7 +86,7 @@ input:focus {
 label {
   margin-left: 9vw;
   color: white;
-  font-family: $main-font;
+  font-family: base.$main-font;
 }
 
 .label-wrap {
@@ -115,7 +117,7 @@ button {
   width: 120px;
   height: 40px;
   border-radius: 100px;
-  background-color: $blue;
+  background-color: base.$blue;
   color: white;
   border: none;
   cursor: pointer;
@@ -131,7 +133,7 @@ button {
 }
 
 .small-thankyou {
-  font-family: $main-font;
+  font-family: base.$main-font;
   color: white;
   font-size: 1.1rem;
   margin-top: 0;
