@@ -19,12 +19,12 @@ export const reference = {
     {
       name: "CS:GO",
       type: ["FPS"],
-      imageSrc: "/images/logos/csgo_blue.svg",
+      imageSrc: "images/logos/csgo_blue.svg",
     },
     {
       name: "Tekken",
       type: ["Fighting"],
-      imageSrc: "./images/logos/tekken_blue.svg",
+      imageSrc: "images/logos/tekken_blue.svg",
     },
     {
       name: "FIFA",
