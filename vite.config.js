@@ -8,11 +8,11 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        nested: resolve(__dirname, "form1.html"),
-        nested: resolve(__dirname, "form2.html"),
-        nested: resolve(__dirname, "form3.html"),
-        nested: resolve(__dirname, "form4.html"),
-        nested: resolve(__dirname, "form5.html"),
+        form1: resolve(__dirname, "form1.html"),
+        form2: resolve(__dirname, "form2.html"),
+        form3: resolve(__dirname, "form3.html"),
+        form4: resolve(__dirname, "form4.html"),
+        form5: resolve(__dirname, "form5.html"),
       },
     },
   },
