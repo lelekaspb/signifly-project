@@ -1,3 +1,25 @@
+import csgo from "../images/logos/csgo_blue.svg";
+import tekken from "../images/logos/tekken_blue.svg";
+import fifa from "../images/logos/fifa_blue.svg";
+import mario from "../images/logos/super_mario_blue.svg";
+import fortnite from "../images/logos/fortnite_blue.svg";
+import cod from "../images/logos/call_of_duty_blue.svg";
+import sims from "../images/logos/the_sims_blue.svg";
+import mortal from "../images/logos/mortal_combat_blue.svg";
+import guitar from "../images/logos/guitar_hero_blue.svg";
+import wow from "../images/logos/world_warcraft_blue.svg";
+import skyrim from "../images/logos/skyrim_blue.svg";
+import starcraft from "../images/logos/starcraft_blue.svg";
+import warcraft from "../images/logos/warcraft_blue.svg";
+import lol from "../images/logos/league_of_legends_blue.svg";
+import dota from "../images/logos/dota_blue.svg";
+import valorant from "../images/logos/valorant_blue.svg";
+import left4dead from "../images/logos/left4dead_blue.svg";
+import overwatch from "../images/logos/overwatch_blue.svg";
+import pubg from "../images/logos/pubg_blue.svg";
+import diablo from "../images/logos/diablo_blue.svg";
+import minecraft from "../images/logos/minecraft.svg";
+
 export const reference = {
   types: [
     "FPS",
@@ -19,107 +41,107 @@ export const reference = {
     {
       name: "CS:GO",
       type: ["FPS"],
-      imageSrc: import("../images/logos/csgo_blue.svg"),
+      imageSrc: csgo,
     },
     {
       name: "Tekken",
       type: ["Fighting"],
-      imageSrc: "images/logos/tekken_blue.svg",
+      imageSrc: tekken,
     },
     {
       name: "FIFA",
       type: ["Sports", "Simulation"],
-      imageSrc: "images/logos/fifa_blue.svg",
+      imageSrc: fifa,
     },
     {
       name: "Super Mario",
       type: ["Platform"],
-      imageSrc: "images/logos/super_mario_blue.svg",
+      imageSrc: mario,
     },
     {
       name: "Fortnite",
       type: ["Survival", "Battle royale"],
-      imageSrc: "images/logos/fortnite_blue.svg",
+      imageSrc: fortnite,
     },
     {
       name: "Call of Duty",
       type: ["FPS"],
-      imageSrc: "images/logos/call_of_duty_blue.svg",
+      imageSrc: cod,
     },
     {
       name: "The Sims",
       type: ["Simulation"],
-      imageSrc: "images/logos/the_sims_blue.svg",
+      imageSrc: sims,
     },
     {
       name: "Mortal Combat",
       type: ["Fighting"],
-      imageSrc: "images/logos/mortal_combat_blue.svg",
+      imageSrc: mortal,
     },
     {
       name: "Guitar Hero",
       type: ["Rhythm"],
-      imageSrc: "images/logos/guitar_hero_blue.svg",
+      imageSrc: guitar,
     },
     {
       name: "World of Warcraft",
       type: ["MMORPG"],
-      imageSrc: "images/logos/world_warcraft_blue.svg",
+      imageSrc: wow,
     },
     {
       name: "Skyrim",
       type: ["Role-playing"],
-      imageSrc: "images/logos/skyrim_blue.svg",
+      imageSrc: skyrim,
     },
     {
       name: "Starcraft",
       type: ["RTS"],
-      imageSrc: "images/logos/starcraft_blue.svg",
+      imageSrc: starcraft,
     },
     {
       name: "Warcraft",
       type: ["MMORPG", "Tower defense", "RTS"],
-      imageSrc: "images/logos/warcraft_blue.svg",
+      imageSrc: warcraft,
     },
     {
       name: "League of Legends",
       type: ["MMORPG", "Role-playing"],
-      imageSrc: "images/logos/league_of_legends_blue.svg",
+      imageSrc: lol,
     },
     {
       name: "Dota",
       type: ["RTS"],
-      imageSrc: "images/logos/dota_blue.svg",
+      imageSrc: dota,
     },
     {
       name: "Valorant",
       type: ["FPS"],
-      imageSrc: "images/logos/valorant_blue.svg",
+      imageSrc: valorant,
     },
     {
       name: "Left for dead",
       type: ["FPS", "Survival"],
-      imageSrc: "images/logos/left4dead_blue.svg",
+      imageSrc: left4dead,
     },
     {
       name: "Overwatch",
       type: ["FPS"],
-      imageSrc: "images/logos/overwatch_blue.svg",
+      imageSrc: overwatch,
     },
     {
       name: "PUBG",
       type: ["Battle royale"],
-      imageSrc: "images/logos/pubg_blue.svg",
+      imageSrc: pubg,
     },
     {
       name: "Diablo",
       type: ["Role-playing"],
-      imageSrc: "images/logos/diablo_blue.svg",
+      imageSrc: diablo,
     },
     {
       name: "Minecraft",
       type: ["Survival"],
-      imageSrc: "images/logos/minecraft.svg",
+      imageSrc: minecraft,
     },
   ],
   areas: {
