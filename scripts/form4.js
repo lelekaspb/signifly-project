@@ -59,16 +59,12 @@ async function changePage() {
 // password validation
 const re = new RegExp(/^.*(?=.{6,15})(?=.*\d)(?=.*[a-zA-Z]).*$/);
 const passwordField = document.querySelector("input.password");
-
 passwordField.addEventListener("keyup", checkPassword);
-let keyStroke = "";
 function checkPassword(e) {
-  const key = e.key;
-  console.log(key);
-  keyStroke += key;
-  console.log(keyStroke);
-  console.log(re.test(keyStroke));
-  if (!re.test(keyStroke)) {
+  const pass = e.target.value;
+  console.log(pass);
+  console.log(re.test(pass));
+  if (!re.test(pass)) {
     passwordField.setCustomValidity("Invalid field.");
     console.log("here");
   } else {
